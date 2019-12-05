@@ -5,7 +5,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.util.TimerTask;
-
+/*
+使用TimerTask来更新seekBar
+ */
 public class MyTimerTask extends TimerTask
 {
     private CustomMusicPlayer mediaPlayer;

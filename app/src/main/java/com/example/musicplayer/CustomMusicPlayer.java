@@ -31,14 +31,14 @@ public class CustomMusicPlayer
                 Log.d(currentMusic.getName(), Background.getTime(mediaPlayer.getCurrentPosition()));
                 int temp = mode % 3;
                 if(temp == 0)
-                {
+                {           //切换为循环模式
                     setMusic(currentMusic.next);
                     play();
                     Background.updateMainActivityUI(currentMusic.getName(), true);
                     if(Background.musicActivity != null)
                         Background.musicActivity.updateUI(currentMusic.getName(), currentMusic.getArtist());
                 }
-                else if(temp == 1)
+                else if(temp == 1)     //切换为单曲模式
                 {
                     setMusic(currentMusic);
                     play();
@@ -46,7 +46,7 @@ public class CustomMusicPlayer
                     if(Background.musicActivity != null)
                         Background.musicActivity.updateUI(currentMusic.getName(), currentMusic.getArtist());
                 }
-                else
+                else        //切换为随机模式
                 {
                     setMusic(random());
                     play();
@@ -87,7 +87,9 @@ public class CustomMusicPlayer
             return false;
         }
     }
-
+/*
+使用随机生成数来实现随机播放
+ */
     public String[] playPrevious()
     {
         if(mode % 3 == 2)

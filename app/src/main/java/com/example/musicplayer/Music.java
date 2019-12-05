@@ -1,5 +1,6 @@
 package com.example.musicplayer;
-
+/*
+获得音乐的相关消息 */
 public class Music
 {
     private String name;
